@@ -1,0 +1,1914 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>OJO KEHINDE | Virtual Assistant</title><style>
+
+/* GENERAL SETTINGS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: #050505;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+/* NAVIGATION */
+
+.navbar {
+  width: 100%;
+  padding: 25px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #222;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* HOME SECTION */
+
+.hero {
+  width: 100%;
+  min-height: 85vh;
+  padding: 90px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-label {
+  color: #888;
+  font-size: 12px;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-size: clamp(45px, 7vw, 90px);
+  line-height: 0.95;
+  margin-bottom: 20px;
+  overflow-wrap: anywhere;
+}
+
+.hero h1 span {
+  color: #777;
+}
+
+.hero-role {
+  font-size: 20px;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+.hero-description {
+  color: #999;
+  font-size: 15px;
+  line-height: 1.9;
+  max-width: 520px;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: 1px solid white;
+  transition: 0.3s;
+}
+
+.primary-btn {
+  background: white;
+  color: black;
+}
+
+.primary-btn:hover {
+  background: transparent;
+  color: white;
+}
+
+.secondary-btn {
+  background: transparent;
+  color: white;
+}
+
+.secondary-btn:hover {
+  background: white;
+  color: black;
+}
+
+/* PROFILE IMAGE */
+
+.hero-image {
+  flex: 0 1 380px;
+  min-width: 0;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid #333;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 800px) {
+
+  .navbar {
+    padding: 20px 6%;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #101010;
+    padding: 25px 6%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    border-bottom: 1px solid #333;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 65px 6%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 420px;
+    flex: none;
+  }
+
+  .hero-image img {
+    height: auto;
+    max-height: 450px;
+    aspect-ratio: 4 / 4.5;
+  }
+
+}
+
+@media (max-width: 400px) {
+
+  .logo {
+    font-size: 17px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-btn {
+    text-align: center;
+  }
+
+}
+
+</style></head><body><!-- NAVIGATION --><nav class="navbar">  <div class="logo">OJO KEHINDE</div>  <button class="menu-btn" id="menuBtn" aria-label="Open navigation">
+    ☰
+  </button>  <div class="nav-links" id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div></nav><!-- HOME SECTION --><section class="hero" id="home">  <div class="hero-text"><p class="hero-label">WELCOME TO MY PORTFOLIO</p>
+
+<h1>
+  OJO<br>
+  <span>KEHINDE</span>
+</h1>
+
+<p class="hero-role">
+  Virtual Assistant | Web Developer
+</p>
+
+<p class="hero-description">
+  I am a virtual assistant and aspiring web developer
+  passionate about organization, digital support,
+  creativity and building useful digital experiences.
+  I enjoy learning new tools and turning ideas into
+  practical projects.
+</p>
+
+<div class="hero-buttons">
+
+  <div class="cv-buttons">
+    <a href="OJO KEHINDE CV.pdf" download class="cv-btn">
+        Download CV
+    </a><a href="Ojo_Kehinde_Resume.pdf" download class="cv-btn">
+    Download Resume
+</a>
+
+</div>
+
+  <a href="#projects" class="hero-btn secondary-btn">
+    VIEW MY WORK
+  </a>
+
+</div>
+
+  </div>  <div class="hero-image"><img src="images/OJO KEHINDE.jpeg" alt="Ojo Kehinde">
+
+  </div>
+</section>
+<!-- ABOUT ME SECTION --><section class="about" id="about">  <div class="about-container"><div class="about-heading">
+  <p>GET TO KNOW ME</p>
+  <h2>ABOUT <span>ME</span></h2>
+</div>
+
+<div class="about-content">
+
+  <p class="about-lead">
+    A curious mind, a creative approach, and a passion
+    for continuous growth.
+  </p>
+
+  <p>
+    My name is Ojo Kehinde. I am a virtual assistant and
+    aspiring web developer with an interest in digital
+    organization, administrative support, customer service,
+    and website development.
+  </p>
+
+  <p>
+    I enjoy working with digital tools, learning new
+    technologies, solving problems, and building practical
+    projects that turn ideas into reality.
+  </p>
+
+  <p>
+    My journey is driven by curiosity, consistency, and
+    the desire to keep improving my skills while creating
+    value through my work.
+  </p>
+
+  <div class="about-highlights">
+
+    <div>
+      <h3>01</h3>
+      <p>Continuous Learning</p>
+    </div>
+
+    <div>
+      <h3>02</h3>
+      <p>Creative Thinking</p>
+    </div>
+
+    <div>
+      <h3>03</h3>
+      <p>Digital Skills</p>
+    </div>
+
+  </div>
+
+</div>
+
+  </div>
+</section>
+  <style>
+.cv-buttons {
+display: flex;
+flex-wrap: wrap;
+gap: 12px;
+margin-top: 20px;
+}
+
+.cv-btn {
+display: inline-block;
+padding: 13px 20px;
+background: #d5b36a;
+color: #050505;
+text-decoration: none;
+font-weight: bold;
+border-radius: 7px;
+text-align: center;
+}
+
+.cv-btn:hover {
+background: #fff;
+}
+
+@media (max-width: 450px) {
+.cv-buttons {
+flex-direction: column;
+}
+
+.cv-btn {
+    width: 100%;
+}
+
+}
+.about {
+  width: 100%;
+  padding: 110px 7%;
+  background: #0a0a0a;
+  border-top: 1px solid #222;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  gap: 60px;
+}
+
+.about-heading p {
+  color: #777;
+  font-size: 12px;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+}
+
+.about-heading h2 {
+  font-size: clamp(45px, 7vw, 85px);
+  line-height: 1;
+}
+
+.about-heading h2 span {
+  color: #777;
+}
+
+.about-content {
+  min-width: 0;
+}
+
+.about-lead {
+  color: white !important;
+  font-size: 23px !important;
+  margin-bottom: 25px;
+}
+
+.about-content > p {
+  color: #999;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 45px;
+  border-top: 1px solid #333;
+  padding-top: 30px;
+}
+
+.about-highlights h3 {
+  font-size: 28px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.about-highlights p {
+  color: #888;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+
+  .about {
+    padding: 80px 6%;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+}
+
+@media (max-width: 450px) {
+
+  .about-highlights {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+}
+
+</style>
+<!-- SERVICES SECTION --><section class="services" id="services">  <div class="services-container"><div class="services-heading">
+  <p>WHAT I OFFER</p>
+  <h2>MY <span>SERVICES</span></h2>
+  <p class="services-intro">
+    Digital and administrative support designed to help
+    individuals and businesses stay organized and productive.
+  </p>
+</div>
+
+<div class="services-grid">
+
+  <div class="service-card">
+    <img src="images/virtual assistance.png" alt="Virtual assistance">
+
+    <span>01 / ADMINISTRATION</span>
+
+    <h3>Virtual Assistance</h3>
+
+    <p>
+      Administrative support, task organization, scheduling,
+      email management and everyday business assistance.
+    </p>
+  </div>
+
+  <div class="service-card">
+    <img src="images/administrative support.png" alt="Administrative support">
+
+    <span>02 / ORGANIZATION</span>
+
+    <h3>Administrative Support</h3>
+
+    <p>
+      Data entry, document preparation, information organization
+      and support with daily administrative tasks.
+    </p>
+  </div>
+
+  <div class="service-card">
+    <img src="images/customer support.png" alt="Customer support">
+
+    <span>03 / COMMUNICATION</span>
+
+    <h3>Customer Support</h3>
+
+    <p>
+      Professional communication, customer enquiries,
+      basic support and helping customers find information.
+    </p>
+  </div>
+
+  <div class="service-card">
+    <img src="images/primeaxis-previwe.png" alt="primeaxis-previwe">
+    <span>04 / DIGITAL CREATION</span>
+
+    <h3>Website Development</h3>
+
+    <p>
+      Building and styling websites using HTML and CSS,
+      with ongoing JavaScript learning and practice.
+    </p>
+  </div>
+
+</div>
+
+  </div></section><style>
+
+.services {
+  width: 100%;
+  padding: 110px 7%;
+  background: #050505;
+  border-top: 1px solid #222;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.services-heading > p:first-child {
+  color: #777;
+  font-size: 12px;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+}
+
+.services-heading h2 {
+  font-size: clamp(45px, 7vw, 85px);
+  line-height: 1;
+}
+
+.services-heading h2 span {
+  color: #777;
+}
+
+.services-intro {
+  color: #999;
+  max-width: 550px;
+  line-height: 1.8;
+  margin: 25px 0 50px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid #333;
+  border-left: 1px solid #333;
+}
+
+.service-card {
+  min-width: 0;
+  padding: 30px;
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  background: #101010;
+}
+
+.service-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  margin-bottom: 30px;
+}
+
+.service-card span {
+  color: #777;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.service-card h3 {
+  font-size: 25px;
+  font-weight: normal;
+  margin: 20px 0 15px;
+}
+
+.service-card p {
+  color: #999;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+@media (max-width: 700px) {
+
+  .services {
+    padding: 80px 6%;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 23px;
+  }
+
+  .service-card img {
+    height: 210px;
+  }
+
+}
+
+</style>
+<!-- SKILLS SECTION --><section class="skills" id="skills">  <div class="skills-container"><div class="skills-heading">
+  <p>MY CAPABILITIES</p>
+  <h2>SKILLS & <span>EXPERTISE</span></h2>
+  <p class="skills-intro">
+    Skills I have developed through learning, practice
+    and hands-on digital projects.
+  </p>
+</div>
+
+<div class="skills-groups">
+
+  <div class="skill-group">
+    <span class="skill-number">01</span>
+    <h3>Virtual Assistance</h3>
+
+    <div class="skill-tags">
+      <span>Administrative Support</span>
+      <span>Email Management</span>
+      <span>Data Entry</span>
+      <span>Internet Research</span>
+      <span>Task Organization</span>
+      <span>Time Management</span>
+      <span>Customer Support</span>
+      <span>Communication</span>
+    </div>
+  </div>
+
+  <div class="skill-group">
+    <span class="skill-number">02</span>
+    <h3>Web Development</h3>
+
+    <div class="skill-tags">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript Practice</span>
+      <span>Responsive Design</span>
+      <span>Website Layout</span>
+      <span>Website Styling</span>
+      <span>GitHub Pages</span>
+    </div>
+  </div>
+
+  <div class="skill-group">
+    <span class="skill-number">03</span>
+    <h3>Digital Tools</h3>
+
+    <div class="skill-tags">
+      <span>Google Docs</span>
+      <span>Google Sheets</span>
+      <span>Google Drive</span>
+      <span>Gmail</span>
+      <span>Google Calendar</span>
+      <span>Microsoft Word</span>
+      <span>Microsoft Excel</span>
+      <span>Canva</span>
+      <span>Zoom</span>
+      <span>VS Code</span>
+      <span>Live Server</span>
+      <span>GitHub</span>
+      <span>Zendesk Practice</span>
+    </div>
+  </div>
+
+  <div class="skill-group">
+    <span class="skill-number">04</span>
+    <h3>Personal Strengths</h3>
+
+    <div class="skill-tags">
+      <span>Creativity</span>
+      <span>Problem Solving</span>
+      <span>Attention to Detail</span>
+      <span>Adaptability</span>
+      <span>Willingness to Learn</span>
+      <span>Organization</span>
+    </div>
+  </div>
+
+</div>
+
+  </div></section><style>
+
+.skills {
+  width: 100%;
+  padding: 110px 7%;
+  background: #0a0a0a;
+  border-top: 1px solid #222;
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.skills-heading > p:first-child {
+  color: #777;
+  font-size: 12px;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+}
+
+.skills-heading h2 {
+  font-size: clamp(40px, 7vw, 85px);
+  line-height: 1;
+}
+
+.skills-heading h2 span {
+  color: #777;
+}
+
+.skills-intro {
+  color: #999;
+  max-width: 550px;
+  line-height: 1.8;
+  margin: 25px 0 50px;
+}
+
+.skills-groups {
+  border-top: 1px solid #333;
+}
+
+.skill-group {
+  display: grid;
+  grid-template-columns: 50px 220px minmax(0, 1fr);
+  gap: 20px;
+  padding: 35px 0;
+  border-bottom: 1px solid #333;
+  align-items: start;
+}
+
+.skill-number {
+  color: #666;
+  font-size: 12px;
+}
+
+.skill-group h3 {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-tags span {
+  padding: 11px 15px;
+  border: 1px solid #333;
+  color: #aaa;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.skill-tags span:hover {
+  border-color: white;
+  color: white;
+}
+
+@media (max-width: 800px) {
+
+  .skills {
+    padding: 80px 6%;
+  }
+
+  .skill-group {
+    grid-template-columns: 35px minmax(0, 1fr);
+    gap: 15px;
+  }
+
+  .skill-group h3 {
+    grid-column: 2;
+  }
+
+  .skill-tags {
+    grid-column: 2;
+  }
+
+}
+
+</style>
+<!-- PROJECTS SECTION --><section class="projects" id="projects">  <div class="projects-container"><div class="projects-heading">
+  <p>MY CREATIVE WORK</p>
+  <h2>SELECTED <span>PROJECTS</span></h2>
+  <p class="projects-intro">
+    A collection of websites, digital interfaces and practical
+    projects created through learning and hands-on development.
+  </p>
+</div>
+
+<div class="projects-grid">
+
+  <!-- PROJECT 01 -->
+  <div class="project-card">
+
+    <div class="project-image">
+      <img src="images/primeaxis-previwe.png"
+           alt="PrimeAxis website preview"
+           loading="lazy">
+    </div>
+
+    <span class="project-number">01 / BUSINESS WEBSITE</span>
+    <h3>PrimeAxis Projects Limited</h3>
+
+    <p>
+      A multi-page website for a Nigerian real estate,
+      construction and property management company.
+    </p>
+
+    <div class="project-tags">
+      <span>HTML</span><span>CSS</span><span>Responsive Design</span>
+    </div>
+
+    <span class="project-status">Client Website Project</span>
+
+  </div>
+
+
+  <!-- PROJECT 02 -->
+  <div class="project-card">
+
+    <div class="project-image">
+      <img src="images/chef.T.png"
+           alt="CHEF.T website preview"
+           loading="lazy">
+    </div>
+
+    <span class="project-number">02 / FOOD BUSINESS</span>
+    <h3>CHEF.T</h3>
+
+    <p>
+      A food business website featuring a menu, food presentation
+      and a WhatsApp ordering experience.
+    </p>
+
+    <div class="project-tags">
+      <span>HTML</span><span>CSS</span><span>WhatsApp Ordering</span>
+    </div>
+
+    <a href="https://kenny-smile.github.io/CHEF.T/"
+       target="_blank" rel="noopener noreferrer"
+       class="project-link">VIEW PROJECT ↗</a>
+
+  </div>
+
+
+  <!-- PROJECT 03 -->
+  <div class="project-card">
+
+    <div class="project-image">
+      <img src="images/pig pro agro.png"
+           alt="PigPro Agro website preview"
+           loading="lazy">
+    </div>
+
+    <span class="project-number">03 / AGRICULTURE</span>
+    <h3>PigPro Agro</h3>
+
+    <p>
+      An agricultural website concept focused on pig sales,
+      pig feed and customer ordering.
+    </p>
+
+    <div class="project-tags">
+      <span>HTML</span><span>CSS</span><span>Business Website</span>
+    </div>
+
+    <span class="project-status">Practice Project</span>
+
+  </div>
+
+
+  <!-- PROJECT 04 -->
+  <div class="project-card">
+
+    <div class="project-image">
+      <img src="images/novapay.png"
+           alt="NovaPay interface preview"
+           loading="lazy">
+    </div>
+
+    <span class="project-number">04 / FINTECH INTERFACE</span>
+    <h3>NovaPay</h3>
+
+    <p>
+      A banking-style interface practice project exploring
+      account layouts, login screens and dashboard design.
+    </p>
+
+    <div class="project-tags">
+      <span>HTML</span><span>CSS</span><span>JavaScript Practice</span>
+    </div>
+
+    <span class="project-status">Practice Project</span>
+
+  </div>
+
+
+  <!-- PROJECT 05 -->
+  <div class="project-card">
+
+    <div class="project-image">
+      <img src="images/crypto.png"
+           alt="Crypto Wallet practice preview"
+           loading="lazy">
+    </div>
+
+    <span class="project-number">05 / WALLET INTERFACE</span>
+    <h3>Crypto Wallet Practice</h3>
+
+    <p>
+      A front-end wallet interface practice project exploring
+      dashboard layouts and demo account screens.
+    </p>
+
+    <div class="project-tags">
+      <span>HTML</span><span>CSS</span><span>JavaScript Practice</span>
+    </div>
+
+    <span class="project-status">Practice Project</span>
+
+  </div>
+
+
+  <!-- PROJECT 06 -->
+  <div class="project-card">
+
+    <div class="project-image">
+      <img src="images/ojo kehinde.png"
+           alt="Personal portfolio preview"
+           loading="lazy">
+    </div>
+
+    <span class="project-number">06 / PERSONAL BRAND</span>
+    <h3>VA Portfolio</h3>
+
+    <p>
+      My personal portfolio showcasing my virtual assistance
+      skills, digital tools, projects and learning journey.
+    </p>
+
+    <div class="project-tags">
+      <span>HTML</span><span>CSS</span><span>Web Design</span>
+    </div>
+
+    <span class="project-status">Ongoing Project</span>
+
+  </div>
+
+</div>
+
+  </div></section><style>
+
+.projects {
+  width: 100%;
+  padding: 110px 7%;
+  background: #050505;
+  border-top: 1px solid #222;
+}
+
+.projects-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.projects-heading > p:first-child {
+  color: #777;
+  font-size: 12px;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+}
+
+.projects-heading h2 {
+  font-size: clamp(40px, 7vw, 85px);
+  line-height: 1;
+}
+
+.projects-heading h2 span {
+  color: #777;
+}
+
+.projects-intro {
+  color: #999;
+  max-width: 600px;
+  line-height: 1.8;
+  margin: 25px 0 50px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid #333;
+  border-left: 1px solid #333;
+}
+
+.project-card {
+  min-width: 0;
+  padding: 30px;
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  background: #101010;
+}
+
+/* PROJECT IMAGE */
+
+.project-image {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  background: #151515;
+  border: 1px solid #333;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.03);
+}
+
+.project-number {
+  color: #777;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.project-card h3 {
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: normal;
+  margin: 25px 0 15px;
+  overflow-wrap: anywhere;
+}
+
+.project-card > p {
+  color: #999;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.project-tags span {
+  color: #aaa;
+  border: 1px solid #333;
+  padding: 8px 11px;
+  font-size: 11px;
+}
+
+.project-status {
+  color: #777;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.project-link {
+  display: inline-block;
+  color: white;
+  font-size: 12px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #777;
+  padding-bottom: 7px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .projects {
+    padding: 80px 6%;
+  }
+
+  .projects-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .project-card {
+    padding: 22px;
+  }
+
+  .project-image {
+    height: 220px;
+  }
+
+}
+
+</style>
+<style>
+.experience {
+    width: 100%;
+    padding: 75px 7%;
+    background: #101010;
+}
+
+.experience-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.experience h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.experience-intro {
+    color: #aaa;
+    text-align: center;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.experience-card {
+    background: #191919;
+    border: 1px solid #303030;
+    border-radius: 12px;
+    padding: 28px;
+}
+
+.experience-card h3 {
+    color: #d5b36a;
+    margin-bottom: 15px;
+    font-size: 21px;
+}
+
+.experience-card p,
+.experience-card li {
+    color: #ccc;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.experience-card ul {
+    padding-left: 20px;
+    margin-top: 12px;
+}
+
+.experience-card li {
+    margin-bottom: 7px;
+}
+
+.experience-label {
+    display: inline-block;
+    color: #d5b36a;
+    background: #292319;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 700px) {
+    .experience {
+        padding: 55px 5%;
+    }
+
+    .experience-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .experience-card {
+        padding: 22px;
+    }
+}
+</style><section class="experience" id="experience">
+    <div class="experience-container">    <h2>Experience & Learning Journey</h2>
+
+    <p class="experience-intro">
+        I build practical projects to develop my skills, gain experience
+        and improve the way I support businesses and individuals.
+    </p>
+
+    <div class="experience-grid">
+
+        <div class="experience-card">
+            <span class="experience-label">Project Experience</span>
+            <h3>Website Development Projects</h3>
+            <p>
+                I have worked on practical website projects, including
+                a client website and business website prototypes.
+            </p>
+            <ul>
+                <li>Creating website layouts with HTML and CSS.</li>
+                <li>Building responsive sections for mobile screens.</li>
+                <li>Adding images, navigation and contact features.</li>
+                <li>Publishing projects with GitHub Pages.</li>
+            </ul>
+        </div>
+
+        <div class="experience-card">
+            <span class="experience-label">Virtual Assistance</span>
+            <h3>Administrative Support Skills</h3>
+            <p>
+                I am developing practical skills to help with everyday
+                administrative and customer support tasks.
+            </p>
+            <ul>
+                <li>Document preparation and organisation.</li>
+                <li>Email and calendar management practice.</li>
+                <li>Customer communication.</li>
+                <li>Online research and information organisation.</li>
+            </ul>
+        </div>
+
+        <div class="experience-card">
+            <span class="experience-label">Technical Learning</span>
+            <h3>IT & Cybersecurity Fundamentals</h3>
+            <p>
+                I am learning computer systems, networking and basic
+                cybersecurity concepts.
+            </p>
+            <ul>
+                <li>Windows computer fundamentals.</li>
+                <li>Basic networking commands.</li>
+                <li>Understanding IP addresses and ports.</li>
+                <li>Introductory cybersecurity concepts.</li>
+            </ul>
+        </div>
+
+        <div class="experience-card">
+            <span class="experience-label">Continuous Learning</span>
+            <h3>Professional Development</h3>
+            <p>
+                I keep improving my skills through hands-on practice
+                and personal projects.
+            </p>
+            <ul>
+                <li>Practising Zendesk support tools.</li>
+                <li>Improving HTML, CSS and JavaScript.</li>
+                <li>Learning productivity tools.</li>
+                <li>Building and improving portfolio projects.</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+</section>
+<style>
+.tools {
+    width: 100%;
+    padding: 75px 7%;
+    background: #050505;
+}
+
+.tools-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.tools h2 {
+    text-align: center;
+    font-size: clamp(28px, 4vw, 40px);
+    margin-bottom: 15px;
+}
+
+.tools-intro {
+    text-align: center;
+    color: #aaa;
+    line-height: 1.7;
+    max-width: 650px;
+    margin: 0 auto 40px;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.tool-card {
+    background: #171717;
+    border: 1px solid #303030;
+    border-radius: 12px;
+    padding: 25px 15px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    border-color: #d5b36a;
+}
+
+.tool-icon {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.tool-card h3 {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.tool-card p {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+@media (max-width: 800px) {
+    .tools-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 400px) {
+    .tools {
+        padding: 55px 5%;
+    }
+
+    .tools-grid {
+        gap: 12px;
+    }
+
+    .tool-card {
+        padding: 20px 10px;
+    }
+
+    .tool-card h3 {
+        font-size: 14px;
+    }
+}
+</style><section class="tools" id="tools">
+    <div class="tools-container">    <h2>Tools I Use</h2>
+
+    <p class="tools-intro">
+        These are some of the digital tools and platforms I use
+        or practise with to support my work and projects.
+    </p>
+
+    <div class="tools-grid">
+
+        <div class="tool-card">
+            <img src="images/doc.png" alt="DOC">
+            <h3>Google Docs</h3>
+            <p>Document creation and editing</p>
+        </div>
+
+        <div class="tool-card">
+            <img src="images/sheet.png" alt="sheet">
+            <h3>Google Sheets</h3>
+            <p>Spreadsheets and data organisation</p>
+        </div>
+
+        <div class="tool-card">
+            <img src="images/drive.jpg" alt="drive">
+            <h3>Google Drive</h3>
+            <p>File storage and organisation</p>
+        </div>
+
+        <div class="tool-card">
+            <img src="images/Gmail.jpg" alt="Gmail">
+            <h3>Gmail</h3>
+            <p>Email communication</p>
+        </div>
+
+        <div class="tool-card">
+            <img src="images/calender.jpg" alt="calendar">
+            <h3>Google Calendar</h3>
+            <p>Scheduling practice</p>
+        </div>
+
+        <div class="tool-card">
+             <img src="images/word.jpg" alt="word">
+            <h3>Microsoft Word</h3>
+            <p>Document preparation</p>
+        </div>
+
+        <div class="tool-card">
+            <img src="images/excel.png" alt="excel">
+            <h3>Microsoft Excel</h3>
+            <p>Spreadsheet practice</p>
+        </div>
+
+        <div class="tool-card">
+            <img src="images/canva.jpg" alt="canva">
+            <h3>Canva</h3>
+            <p>Simple graphic design</p>
+        </div>
+
+        <div class="tool-card">
+            <img src="images/zoom.jpg" alt="zoom">
+            <h3>Zoom</h3>
+            <p>Online meetings</p>
+        </div>
+
+        <div class="tool-card">
+            <img src="images/vs.jpg" alt="vs">
+            <h3>VS Code</h3>
+            <p>Writing and editing code</p>
+        </div>
+
+        <div class="tool-card">
+            <img src="images/live server.jpg" alt="live server">
+            <h3>Live Server</h3>
+            <p>Local website testing</p>
+        </div>
+
+        <div class="tool-card">
+            <img src="images/github.jpg" alt="github">
+            <h3>GitHub</h3>
+            <p>Code hosting and project publishing</p>
+        </div>
+
+        <div class="tool-card">
+            <img src="images/zendesk.png" alt="zendesk">
+            <h3>Zendesk</h3>
+            <p>Customer support tool practice</p>
+        </div>
+
+    </div>
+</div>
+
+</section>
+<style>
+.why-me {
+    width: 100%;
+    padding: 75px 7%;
+    background: #101010;
+}
+
+.why-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.why-me h2 {
+    text-align: center;
+    font-size: clamp(28px, 4vw, 40px);
+    margin-bottom: 15px;
+}
+
+.why-intro {
+    color: #aaa;
+    text-align: center;
+    line-height: 1.7;
+    max-width: 650px;
+    margin: 0 auto 40px;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.why-card {
+    background: #191919;
+    border: 1px solid #303030;
+    border-radius: 12px;
+    padding: 28px 22px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-5px);
+    border-color: #d5b36a;
+}
+
+.why-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.why-card h3 {
+    color: #d5b36a;
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.why-card p {
+    color: #bbb;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+@media (max-width: 800px) {
+    .why-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 500px) {
+    .why-me {
+        padding: 55px 5%;
+    }
+
+    .why-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+</style><section class="why-me" id="why-me">
+    <div class="why-container">    <h2>Why Work With Me</h2>
+
+    <p class="why-intro">
+        I believe good work comes from responsibility, clear communication
+        and a willingness to keep learning and improving.
+    </p>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+            <div class="why-icon">🎯</div>
+            <h3>Attention to Detail</h3>
+            <p>
+                I take care to organise tasks properly and pay attention
+                to the details that matter.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">🤝</div>
+            <h3>Communication</h3>
+            <p>
+                I value clear, respectful communication and keeping
+                people informed about progress.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">⏰</div>
+            <h3>Time Management</h3>
+            <p>
+                I understand the importance of planning tasks and
+                respecting agreed deadlines.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">📚</div>
+            <h3>Willingness to Learn</h3>
+            <p>
+                I am open to feedback and committed to improving
+                my skills through practice.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">🔍</div>
+            <h3>Problem Solving</h3>
+            <p>
+                I approach challenges patiently and work towards
+                practical solutions.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">💼</div>
+            <h3>Professionalism</h3>
+            <p>
+                I value responsibility, honesty and respect in
+                every working relationship.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+</section>
+<style>
+.contact {
+    width: 100%;
+    padding: 75px 7%;
+    background: #050505;
+}
+
+.contact-container {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    margin-bottom: 15px;
+}
+
+.contact-intro {
+    color: #aaa;
+    line-height: 1.8;
+    max-width: 650px;
+    margin: 0 auto 35px;
+}
+
+.contact-box {
+    background: #171717;
+    border: 1px solid #333;
+    border-radius: 14px;
+    padding: 35px 25px;
+}
+
+.contact-box h3 {
+    color: #d5b36a;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.contact-box p {
+    color: #bbb;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 7px;
+    background: #d5b36a;
+    color: #050505;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background: #fff;
+    transform: translateY(-3px);
+}
+
+.contact-btn.secondary {
+    background: transparent;
+    color: #d5b36a;
+    border: 1px solid #d5b36a;
+}
+
+.contact-btn.secondary:hover {
+    background: #d5b36a;
+    color: #050505;
+}
+
+@media (max-width: 500px) {
+    .contact {
+        padding: 55px 5%;
+    }
+
+    .contact-box {
+        padding: 27px 18px;
+    }
+
+    .contact-links {
+        flex-direction: column;
+    }
+
+    .contact-btn {
+        width: 100%;
+    }
+}
+</style><section class="contact" id="contact">
+    <div class="contact-container">    <h2>Let's Work Together</h2>
+
+    <p class="contact-intro">
+        Looking for virtual assistance, administrative support or
+        website development? I'd be happy to hear about your project.
+    </p>
+
+    <div class="contact-box">
+        <h3>Get In Touch</h3>
+
+        <p>
+            Reach out to discuss your needs, ask a question
+            or explore how we can work together.
+        </p>
+
+        <div class="contact-links">
+
+            <a href="mailto:ojokehinde564@gmail.com" class="email-link">
+  <i class="fas fa-envelope"></i> Email Me
+</a>
+
+            <a href="https://www.linkedin.com/in/YOUR-LINKEDIN/"
+               target="_blank" rel="noopener noreferrer"
+               class="contact-btn secondary">
+                LinkedIn
+            </a>
+
+            <a href="https://wa.me/9165982983"
+               target="_blank" rel="noopener noreferrer"
+               class="contact-btn secondary">
+                WhatsApp
+            </a>
+
+        </div>
+    </div>
+
+</div>
+
+</section>
+<style>
+.footer {
+    width: 100%;
+    padding: 35px 7% 20px;
+    background: #111;
+    border-top: 1px solid #333;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.footer-brand h3 {
+    color: #d5b36a;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.footer-brand p {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #d5b36a;
+}
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 25px auto 0;
+    padding-top: 18px;
+    border-top: 1px solid #303030;
+    text-align: center;
+    color: #888;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .footer {
+        padding: 35px 5% 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        gap: 14px;
+    }
+}
+.email-link {
+display: inline-block;
+padding: 12px 25px;
+background: #000000;
+color: #C5A253;
+border: 1px solid #C5A253;
+border-radius: 6px;
+text-decoration: none;
+font-weight: bold;
+transition: 0.3s ease;
+}
+
+.email-link:hover {
+background: #C5A253;
+color: #000000;
+}
+</style><footer class="footer">
+    <div class="footer-container">    <div class="footer-brand">
+        <h3>OJO KEHINDE</h3>
+        <p>Virtual Assistant | Web Developer</p>
+    </div>
+
+    <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+</div>
+
+<div class="footer-bottom">
+    <p>&copy; <span id="footerYear"></span> OJO KEHINDE. All rights reserved.</p>
+    <p>Designed and built with care.</p>
+</div>
+
+</footer><script>
+    document.getElementById("footerYear").textContent =
+        new Date().getFullYear();
+</script>
+  <script>
+
+/* MOBILE NAVIGATION */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", function() {
+
+  navLinks.classList.toggle("active");
+
+});
+
+navLinks.querySelectorAll("a").forEach(function(link) {
+
+  link.addEventListener("click", function() {
+    navLinks.classList.remove("active");
+  });
+
+});
+
+</script>
+</body>
+</html>
